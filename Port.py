@@ -14,6 +14,8 @@ def main() :
     print("|  {99} Exit            |")
     print("|_______________________|")
     a = input("-->")
+    def pyGreen(skk) : print("\033[92m {}\033[00m".format(skk))
+    def pyRed(skk) : print("\033[91m {}\033[00m".format(skk))
     if a == "00":
         server = input("Enter your site:\n(example: www.google.com) --> ")
         ips = socket.gethostbyname(server)
@@ -29,7 +31,7 @@ def main() :
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 result = sock.connect_ex((ips, port))
                 if result == 0:
-                    print("Port {}: 	 Open".format(port))
+                    pyGreen("Port {}: 	 Open".format(port))
                 sock.close()
         except:
             print("Couldn't connect to server!!")
@@ -56,9 +58,9 @@ def main() :
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 result = sock.connect_ex((ips, port))
                 if result == 0:
-                    print("Port {}: 	 Open".format(port))
+                    pyGreen("Port {}: 	 Open".format(port))
                 else:
-                    print("Port {}:     Close".format(port))
+                    pyRed("Port {}:     Close".format(port))
                 sock.close()
 
         except :
