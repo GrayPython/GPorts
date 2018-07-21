@@ -78,6 +78,10 @@ def main() :
         oo = input("\nPress Enter ")
         if oo == "":
             main()
+            
+    elif a == "99" :
+        print("...GoodBye...")
+        exit()
     else:
         print("Please select the correct option!")
         oo = input("\nPress Enter ")
