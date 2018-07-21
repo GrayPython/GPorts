@@ -15,7 +15,7 @@ def main() :
     print("|_______________________|")
     a = input("-->")
     if a == "00":
-        server = input("Enter your site:(example: www.google.com) ")
+        server = input("Enter your site:\n(example: www.google.com) --> ")
         ips = socket.gethostbyname(server)
         print("--------------------------------------")
         print("Please wait, scanning remote host: " + ips)
@@ -41,7 +41,7 @@ def main() :
         if oo == "":
             main()
     elif a == "11":
-        server = input("Enter your site:(example: www.google.com) ")
+        server = input("Enter your site:\n(example: www.google.com) --> ")
         ips = socket.gethostbyname(server)
         portt = input("Enter Ports:(example: 21,80) ").split(",")
         portt = [int(p) for p in portt]
