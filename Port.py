@@ -13,7 +13,7 @@ def main() :
     print("|  {11} Manual Scan     |")
     print("|  {99} Exit            |")
     print("|_______________________|")
-    a = input("-->")
+    a = input("--> ")
     def pyGreen(skk) : print("\033[92m {}\033[00m".format(skk))
     def pyRed(skk) : print("\033[91m {}\033[00m".format(skk))
     if a == "00":
